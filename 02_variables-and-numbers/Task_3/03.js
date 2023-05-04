@@ -1,23 +1,17 @@
-let n = 100;
-let m = -5;
+let m = -5; // задаем минимальное число диапозона
+let n = 100; // задаем максимальное число диапозона
 
-let range = Math.abs(m - n);
+let number1 = Math.round(Math.random() * (m - n) + n); // задаем первое число
+let number2 = Math.round(Math.random() * (m - n) + n); //задаем второе число
 
-  let numberInRange = Math.round(
-  Math.random() * range);
+let max = Math.max(number1, number2); //вычисляем максимум
+let min = Math.min(number1, number2); // вычисляем минимум
 
-let max = Math.max(n, m);
-let resultMin = max - numberInRange;
+console.log("Минимальное число", min); // выводим максимум
+console.log("Максимальное число", max); // выводим минимум
 
-let min = Math.min(n, m);
-let resultMax = min + numberInRange;
-
-console.log("Макс число", resultMax);
-console.log("Минимальное число", resultMin);
-console.log("Максимальное число", numberInRange);
-
-//console.log("Числа равны", (max + numberInRange) === numberInRange);
-//console.log("Первое число больше", (max + numberInRange) > numberInRange);
-//console.log("Первое число меньше", (max + numberInRange) < numberInRange);
-//console.log("Первое число не равно", (max + numberInRange) !== numberInRange);
-//console.log("Первое число больше или равно", (max + numberInRange) >= numberInRange);
+console.log("Числа равны", max === min);
+console.log("Первое число больше", max > min);
+console.log("Первое число меньше", max < min);
+console.log("Первое число не равно", max !== min);
+console.log("Первое число больше или равно", max >= min);
